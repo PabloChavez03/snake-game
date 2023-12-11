@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  position: relative;
+}
+
+.board-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin-top: 20px;
+}
+
+.board-info .score-container {
+  display: inline-flex;
+}
+
+.board-info, #start {
+  font-size: 25px;
+}
+
+#start{
+  background-color: #47ad;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Share Tech Mono", monospace;
+}
+
+#start:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#game-over {
+  display: none;
+  position: absolute;
+  font-size: 50px;
+  top: 44%;
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+.emptySquare {
+  background-color: #2bad;
+}
+
+.snakeSquare {
+  background-color: #ccf47f;
+  border-radius: 5px;
+  outline: 1px solid black;
+}
+
+.foodSquare {
+  background-image: url("./public/apple.png");
+  background-size: cover;
+  outline: 1px solid black;
+  border-radius: 5px;
+}
