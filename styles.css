@@ -31,8 +31,8 @@ main {
   margin-top: 20px;
 }
 
-.board-info .score-container {
-  display: inline-flex;
+.score-container {
+  display: none
 }
 
 .board-info, #start {
@@ -67,7 +67,7 @@ main {
 }
 
 .emptySquare {
-  background-color: #2bad;
+  background-color: #51aa51;
 }
 
 .snakeSquare {
