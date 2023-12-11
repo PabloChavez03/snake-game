@@ -3,10 +3,11 @@ const board = document.getElementById("board");
 const scoreBoard = document.getElementById("score");
 const start = document.getElementById("start");
 const gameOver = document.getElementById("game-over");
+const scoreContainer = document.querySelector(".score-container")
 
 // Game settings
 const boardSize = 10;
-const gameSpeed = 100;
+const gameSpeed = 120;
 const squareTypes = {
   emptySquare: 0,
   snakeSquare: 1,
@@ -146,6 +147,7 @@ const setGame = () => {
 const startGame = () => {
   setGame();
   gameOver.style.display = "none";
+  scoreContainer.style.display = "inline-flex"
   start.disabled = true;
   drawSnake();
   updateScore();
